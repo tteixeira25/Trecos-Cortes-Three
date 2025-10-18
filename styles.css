@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #5d8aa8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 110px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-weight: bold;
+    font-size: 16px;
+    color: #636363;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #1b3d5d;
+    margin-bottom: 20px;
+}
+
+.link-wrapper {
+    position: relative;
+    margin: 10px 0;
+}
+
+.link-button {
+    height: 55px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1b3d5d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    transition: 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+.link-button .icon {
+    position: absolute;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.link-button:hover {
+    background: #16324d;
+}
+
+.dots {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+}
+
+.options-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    width: 150px;
+}
+
+.options-menu button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.options-menu button:hover {
+    background-color: #eee;
+}
+
+.link-wrapper.active .options-menu {
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 120px;
+    }
+
+    .link-button {
+        padding: 10px 14px;
+    }
+
+    .dots {
+        font-size: 18px;
+        right: 14px;
+    }
+
+    .container {
+        max-width: 320px;
+        padding: 15px;
+    }
+}
